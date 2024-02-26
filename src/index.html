@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Interval Timer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./interval-form.js"></script>
+        <script src="./dialog.js"></script>
+    </head>  
+    <header class="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
+        <div class="text-center">
+          <h1 class="font-semibold text-slate-900">Interval Timer</h2>
+        </div>
+  </header>
+    <body>
+        <interval-dialog class="px-4 py-4">
+        </interval-dialog>
+        <div id="main-content" class="grid justify-items-center">
+            <button id="show-dialog" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" method="dialog">
+                Create an interval
+            </button>
+        </div>
+    </body>
+    <script>
+        // TODO(rudiejd) extract to a component
+        const dialog = document.querySelector("dialog");
+        const showButton = document.querySelector("button#show-dialog")
+
+        showButton.addEventListener("click", () => {
+            dialog.showModal();
+        });
+    </script>
+</html>

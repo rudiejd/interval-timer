@@ -1,12 +1,12 @@
 class IntervalTimer extends HTMLElement {
     constructor() {
         super();
-        this.timeRemaining = 100;
     }
 
     connectedCallback() {
-
         var display = document.createElement("p");
+
+        this.timeRemaining = this.getAttribute("time-seconds");
 
         display.innerText = this.timeRemaining;
 

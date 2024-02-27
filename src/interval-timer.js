@@ -24,7 +24,7 @@ class IntervalTimer extends HTMLElement {
         // for now, just make the countdown callbacks no-op if the reset count doesnt match
         this.addEventListener("click", () => {
             this.timeRemaining = this.originalTimeRemaining;
-            display.innerText = this.timeRemaining;
+            this.innerText = this.timeRemaining;
             this.addCountdownCallbacks();
         });
     }
